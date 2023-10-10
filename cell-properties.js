@@ -37,7 +37,7 @@ let inactiveColorProp = "#ecf0f1";
 // Application of two-way binding
 // Attach property listeners
 bold.addEventListener("click", (e) => {
-  let address = addressBar.value;
+  let address = address.value;
   let [cell, cellProp] = activecell(address);
 
   // Modification
@@ -46,7 +46,7 @@ bold.addEventListener("click", (e) => {
   bold.style.backgroundColor = cellProp.bold ? activeColorProp : inactiveColorProp; // UI change (2)
 });
 italic.addEventListener("click", (e) => {
-  let address = addressBar.value;
+  let address = address.value;
   let [cell, cellProp] = activecell(address);
 
   // Modification
@@ -55,7 +55,7 @@ italic.addEventListener("click", (e) => {
   italic.style.backgroundColor = cellProp.italic ? activeColorProp : inactiveColorProp; // UI change (2)
 });
 underline.addEventListener("click", (e) => {
-  let address = addressBar.value;
+  let address = address.value;
   let [cell, cellProp] = activecell(address);
 
   // Modification
@@ -64,7 +64,7 @@ underline.addEventListener("click", (e) => {
   underline.style.backgroundColor = cellProp.underline ? activeColorProp : inactiveColorProp; // UI change (2)
 });
 fontSize.addEventListener("change", (e) => {
-  let address = addressBar.value;
+  let address = address.value;
   let [cell, cellProp] = activecell(address);
 
   cellProp.fontSize = fontSize.value; // Data change
@@ -72,7 +72,7 @@ fontSize.addEventListener("change", (e) => {
   fontSize.value = cellProp.fontSize;
 });
 fontFamily.addEventListener("change", (e) => {
-  let address = addressBar.value;
+  let address = address.value;
   let [cell, cellProp] = activecell(address);
 
   cellProp.fontFamily = fontFamily.value; // Data change
@@ -80,7 +80,7 @@ fontFamily.addEventListener("change", (e) => {
   fontFamily.value = cellProp.fontFamily;
 });
 fontColor.addEventListener("change", (e) => {
-  let address = addressBar.value;
+  let address = address.value;
   let [cell, cellProp] = activecell(address);
 
   cellProp.fontColor = fontColor.value; // Data change
@@ -88,7 +88,7 @@ fontColor.addEventListener("change", (e) => {
   fontColor.value = cellProp.fontColor;
 });
 BGcolor.addEventListener("change", (e) => {
-  let address = addressBar.value;
+  let address = address.value;
   let [cell, cellProp] = activecell(address);
 
   cellProp.BGcolor = BGcolor.value; // Data change
@@ -97,7 +97,7 @@ BGcolor.addEventListener("change", (e) => {
 });
 alignment.forEach((alignElem) => {
   alignElem.addEventListener("click", (e) => {
-    let address = addressBar.value;
+    let address = address.value;
     let [cell, cellProp] = activecell(address);
 
     let alignValue = e.target.classList[0];
@@ -134,7 +134,7 @@ for (let i = 0; i < allCells.length; i++) {
 function addListenerToAttachCellProperties(cell) {
   // Work
   cell.addEventListener("click", (e) => {
-    let address = addressBar.value;
+    let address = address.value;
     let [rid, cid] = decodeRIDCIDFromAddress(address);
     let cellProp = sheetDB[rid][cid];
 
