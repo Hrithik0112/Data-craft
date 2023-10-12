@@ -92,12 +92,22 @@ body {
   width: calc(100vw - 2vw);
 }
 .sheet-folder {
+  height: 80%;
   text-decoration: underline;
   font-weight: bold;
   text-decoration-thickness: 3px;
   font-size: 0.9rem;
+  /* background-color: lightblue; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.sheet-content {
+  width: 5rem;
+  /* background-color: lightgreen; */
+}
 .grid-cont {
   height: calc(100vh - 3rem - 3rem - 2rem - 3rem);
   position: relative;
