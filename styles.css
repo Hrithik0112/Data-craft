@@ -94,12 +94,16 @@ body {
 .sheet-add-icon {
   width: 2vw;
 }
+.sheet-add-icon:hover {
+  cursor: default;
+}
 .sheets-folder-cont {
   display: flex;
   align-items: center;
   height: 80%;
   width: 5rem;
   width: calc(100vw - 2vw);
+  overflow: auto;
 }
 .sheet-folder {
   height: 80%;
