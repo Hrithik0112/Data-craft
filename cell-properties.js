@@ -114,9 +114,8 @@ alignment.forEach((alignElem) => {
     cellProp.alignment = alignValue; // Data change
     cell.style.textAlign = cellProp.alignment; // UI change (1)
 
-    switch (
-      alignValue // UI change (2)
-    ) {
+    // UI change (2)
+    switch (alignValue) {
       case "left":
         leftAlign.style.backgroundColor = activeColorProp;
         centerAlign.style.backgroundColor = inactiveColorProp;
@@ -166,9 +165,9 @@ function addListenerToAttachCellProperties(cell) {
     BGcolor.value = cellProp.BGcolor;
     fontSize.value = cellProp.fontSize;
     fontFamily.value = cellProp.fontFamily;
-    switch (
-      cellProp.alignment // UI change (2)
-    ) {
+
+    // UI change (2)
+    switch (cellProp.alignment) {
       case "left":
         leftAlign.style.backgroundColor = activeColorProp;
         centerAlign.style.backgroundColor = inactiveColorProp;
