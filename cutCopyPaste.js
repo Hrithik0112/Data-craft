@@ -42,7 +42,7 @@ function defaultSelectedCellsUI() {
     let cell = document.querySelector(
       `.cell[rid="${rangeStorage[i][0]}"][cid="${rangeStorage[i][1]}"]`
     );
-    cell.style.border = "1px solid lightgrey";
+    cell.style.border = "1px solid 	#696969";
   }
 }
 
@@ -127,7 +127,9 @@ pasteBtn.addEventListener("click", (e) => {
       let data = copyData[r][c];
       let cellProp = sheetDB[i][j];
 
-      cellProp.value = data.value;
+      if (data && data.value !== undefined) {
+        cellProp.value = data.value;
+      }
       cellProp.bold = data.bold;
       cellProp.italic = data.italic;
       cellProp.underline = data.underline;

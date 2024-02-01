@@ -159,12 +159,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #dfe4ea;
+  border: 1px solid #696969;
 }
 .address-row {
   height: 2rem;
   width: 5rem;
-  border: 1px solid #dfe4ea;
+  border: 1px solid #696969;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,7 +175,7 @@ body {
 .cell {
   height: 2rem;
   width: 5rem;
-  border: 1px solid #dfe4ea;
+  border: 1px solid #696969;
   outline: none;
 }
 
